@@ -13,6 +13,8 @@ winget import "C:\Users\WDAGUtilityAccount\Desktop\Scripts\Import.json" --accept
 
 Remove-Item -Recurse C:\Script_TMP
 
+Set-ExecutionPolicy RemoteSigned
+
 Install-PackageProvider -Name NuGet -Force
 Install-Module -Name VMware.PowerCLI -Scope AllUsers -Confirm:$False -AllowClobber -Force
 Set-PowerCLIConfiguration -ParticipateInCEIP $false -Scope AllUsers -Confirm:$False
