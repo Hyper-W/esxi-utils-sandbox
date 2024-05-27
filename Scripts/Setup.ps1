@@ -13,6 +13,11 @@ winget import "C:\Users\WDAGUtilityAccount\Desktop\Scripts\Import.json" --accept
 
 Remove-Item -Recurse C:\Script_TMP
 
+Install-PackageProvider -Name NuGet -Force
+Install-Module -Name VMware.PowerCLI -Scope AllUsers -Confirm:$False -AllowClobber -Force
+Set-PowerCLIConfiguration -ParticipateInCEIP $false -Scope AllUsers -Confirm:$False
+Set-PowerCLIConfiguration -InvalidCertificateAction Ignore -Confirm:$False
+
 Set-WinUserLanguageList -Force ja-JP
 
 [string]$Path = "HKLM:\SYSTEM\CurrentControlSet\services\i8042prt\Parameters"
