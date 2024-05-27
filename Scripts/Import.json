@@ -9,9 +9,6 @@
 				},
 				{
 					"PackageIdentifier": "Google.Chrome"
-				},
-				{
-					"PackageIdentifier": "Microsoft.WindowsTerminal"
 				}
 			],
 			"SourceDetails": {
